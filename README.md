@@ -4,7 +4,7 @@ This is a stylesheet loader which is useful for controlling the dynamic loading 
 CSS. It provides the following features:
 
 * easy one-time dynamic loading of external stylesheets
-* easy dynamic loading of CSS using a <style> tag
+* easy dynamic loading of CSS using a &lt;style&gt; tag
 * returns a promise representing whether the stylesheet has loaded
 
 Inspired by the Filament Group's work on CSS loading: https://github.com/filamentgroup/loadCSS
@@ -21,8 +21,8 @@ Using NPM:
 
 ## Usage
 
-    // Load arbitrary styles into a <style> tag, to appear at the end of the <body>
-    // (if present in the DOM), otherwise at the end of the <head>.
+    // Load arbitrary styles into a &lt;style&gt; tag, to appear at the end of the &lt;body&gt;
+    // (if present in the DOM), otherwise at the end of the &lt;head&gt;.
     // Note that we use the nz.ffx psuedo-namespace to prevent collisions
     var myStylesheet = nz.ffx.loadStylesheet(
         'body {background-color: rgb(255, 0, 0);}',
@@ -30,8 +30,8 @@ Using NPM:
         'screen'
     );
 
-    // Load an external stylesheet, to appear at the end of the <body>
-    // (if present in the DOM), otherwise at the end of the <head>.
+    // Load an external stylesheet, to appear at the end of the &lt;body&gt;
+    // (if present in the DOM), otherwise at the end of the &lt;head&gt;.
     var myStylesheet = nz.ffx.loadStylesheet(
         'http://example.com/stylesheet.css'
         'myStylesheetClass',

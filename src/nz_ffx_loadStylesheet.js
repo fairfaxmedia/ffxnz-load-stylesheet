@@ -7,15 +7,11 @@
  * Inspired by the Filament Group's work on CSS loading: https://github.com/filamentgroup/loadCSS
  */
 
-// eslint-disable-next-line vars-on-top
-window.nz = window.nz || {};
-window.nz.ffx = window.nz.ffx || {};
-
-(function(namespace) {
+(function(window) {
     'use strict';
 
     // Create an array for storing our stylesheet promises.
-    namespace.stylesheetsLoaded = namespace.stylesheetsLoaded || [];
+    var stylesheetsLoaded = [];
 
     /**
      * Load the supplied stylesheet url at the end of the <body>
@@ -80,10 +76,6 @@ window.nz.ffx = window.nz.ffx || {};
                 });
             }
 
-            if (namespace.log) {
-                namespace.log('Loading link ' + url);
-            }
-
             // wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
             function ready(cb) {
                 if (doc.body) {
@@ -104,7 +96,7 @@ window.nz.ffx = window.nz.ffx || {};
 
         // Add our script to the stylesheetsLoaded array so other parts of the application
         // can determine whether a given stylesheet is / has been script loaded.
-        namespace.stylesheetsLoaded.push({
+        stylesheetsLoaded.push({
             urlOrStyles: url,
             promise: stylesheetPromise,
         })
@@ -154,7 +146,7 @@ window.nz.ffx = window.nz.ffx || {};
 
         // Add our script to the stylesheetsLoaded array so other parts of the application
         // can determine whether a given stylesheet is / has been script loaded.
-        namespace.stylesheetsLoaded.push({
+        stylesheetsLoaded.push({
             urlOrStyles: styles,
             promise: stylesheetPromise,
         })
@@ -172,10 +164,10 @@ window.nz.ffx = window.nz.ffx || {};
      *                               Defaults to 'all'.
      * @return {window.Promise}      The promise representing whether the stylesheet has loaded.
      */
-    namespace.loadStylesheet = function(urlOrStyles, stylesClass, media) {
+    var loadStylesheet = function(urlOrStyles, stylesClass, media) {
         var promise;
 
-        var stylesheets = namespace.stylesheetsLoaded.filter(function(item) {
+        var stylesheets = stylesheetsLoaded.filter(function(item) {
             return item.urlOrStyles === urlOrStyles;
         });
 
@@ -193,4 +185,16 @@ window.nz.ffx = window.nz.ffx || {};
 
         return promise;
     }
-}(window.nz.ffx))
+
+    if (typeof exports !== 'undefined') {
+        // commonjs
+        exports.loadStylesheet = loadStylesheet;
+    } else {
+        // browserland
+        window.nz = window.nz || {};
+        window.nz.ffx = window.nz.ffx || {};
+        window.nz.ffx.loadStylesheet = loadStylesheet;
+        window.nz.ffx.stylesheetsLoaded = stylesheetsLoaded;
+    }
+
+}(typeof global !== 'undefined' ? global : this))

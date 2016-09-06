@@ -21,6 +21,8 @@ Using NPM:
 
 ## Usage
 
+This module can be included as commonJS, or directly in a browser, and presumes that `Promise` is available on the global.
+
     // Load arbitrary styles into a &lt;style&gt; tag, to appear at the end of the &lt;body&gt;
     // (if present in the DOM), otherwise at the end of the &lt;head&gt;.
     // Note that we use the nz.ffx psuedo-namespace to prevent collisions

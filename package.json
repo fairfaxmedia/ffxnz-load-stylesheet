@@ -2,7 +2,7 @@
   "name": "load-stylesheet",
   "version": "2.0.0",
   "description": "A stylesheet loader which is useful for controlling the dynamic loading of CSS",
-  "main": "index.js",
+  "main": "./src/nz_ffx_loadStylesheet.js",
   "scripts": {
     "test": "karma start karma.conf.js"
   },

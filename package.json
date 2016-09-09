@@ -1,6 +1,6 @@
 {
   "name": "load-stylesheet",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A stylesheet loader which is useful for controlling the dynamic loading of CSS",
   "main": "./src/nz_ffx_loadStylesheet.js",
   "scripts": {

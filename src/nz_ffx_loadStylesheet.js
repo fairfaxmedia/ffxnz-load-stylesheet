@@ -186,9 +186,9 @@
         return promise;
     }
 
-    if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
         // commonjs
-        exports.loadStylesheet = loadStylesheet;
+        exports = module.exports = loadStylesheet;
     } else {
         // browserland
         window.nz = window.nz || {};

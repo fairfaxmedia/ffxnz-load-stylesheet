@@ -1,5 +1,5 @@
 {
-  "name": "ffx-load-stylesheet",
+  "name": "ffxnz-load-stylesheet",
   "version": "3.0.0",
   "description": "A stylesheet loader which is useful for controlling the dynamic loading of CSS",
   "main": "./src/nz_ffx_loadStylesheet.js",

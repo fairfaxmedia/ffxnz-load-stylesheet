@@ -164,7 +164,7 @@
      *                               Defaults to 'all'.
      * @return {window.Promise}      The promise representing whether the stylesheet has loaded.
      */
-    var loadStylesheet = function(urlOrStyles, stylesClass, media) {
+    var ffxnzLoadStylesheet = function(urlOrStyles, stylesClass, media) {
         var promise;
 
         var stylesheets = stylesheetsLoaded.filter(function(item) {
@@ -188,12 +188,12 @@
 
     if (typeof module !== 'undefined' && module.exports) {
         // commonjs
-        exports = module.exports = loadStylesheet;
+        exports = module.exports = ffxnzLoadStylesheet;
     } else {
         // browserland
         window.nz = window.nz || {};
         window.nz.ffx = window.nz.ffx || {};
-        window.nz.ffx.loadStylesheet = loadStylesheet;
+        window.nz.ffx.loadStylesheet = ffxnzLoadStylesheet;
         window.nz.ffx.stylesheetsLoaded = stylesheetsLoaded;
     }
 

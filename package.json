@@ -1,5 +1,5 @@
 {
-  "name": "load-stylesheet",
+  "name": "ffx-load-stylesheet",
   "version": "2.1.1",
   "description": "A stylesheet loader which is useful for controlling the dynamic loading of CSS",
   "main": "./src/nz_ffx_loadStylesheet.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fairfaxmedia/load-stylesheet.git"
+    "url": "git+https://github.com/fairfaxmedia/ffxnz-load-stylesheet.git"
   },
   "author": "Jason Darwin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fairfaxmedia/load-stylesheet/issues"
+    "url": "https://github.com/fairfaxmedia/ffxnz-load-stylesheet/issues"
   },
   "devDependencies": {
     "jasmine-core": "^2.3.4",
@@ -25,5 +25,5 @@
     "karma-spec-reporter": "0.0.26",
     "promise-polyfill": "^6.0.1"
   },
-  "homepage": "https://github.com/fairfaxmedia/load-stylesheet#readme"
+  "homepage": "https://github.com/fairfaxmedia/ffxnz-load-stylesheet#readme"
 }

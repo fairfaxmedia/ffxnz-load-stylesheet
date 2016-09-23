@@ -15,8 +15,8 @@ Inspired by the Filament Group's work on CSS loading: https://github.com/filamen
 Using NPM:
 
     # Once installed, the script can be found at:
-    # node_modules/load-stylesheet/src/nz_ffx_loadStylesheet
-    npm install --save git+https://github.com/fairfaxmedia/load-stylesheet.git
+    # node_modules/ffxnz-load-stylesheet/src/nz_ffx_loadStylesheet
+    npm install --save git+https://github.com/fairfaxmedia/ffxnz-load-stylesheet.git
 
 
 ## Usage

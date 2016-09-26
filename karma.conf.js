@@ -14,7 +14,7 @@ module.exports = function(config) {
       '**/*.html': ['html2js']
     },
     files: [
-        'node_modules/promise-polyfill/Promise.js',
+        'node_modules/promise-polyfill/promise.js',
         'src/*.js',
         'test/spec/*',
         {pattern: 'test/fixture/*', included: false, served: true, nocache: false},

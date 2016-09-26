@@ -34,7 +34,7 @@
             var link = document.createElement('link');
 
             // Use the url argument as source attribute
-            link.rel = 'stylesheet'
+            link.rel = 'stylesheet';
             link.href = url;
 
             // Temporarily set media to something inapplicable to ensure
@@ -99,7 +99,7 @@
         stylesheetsLoaded.push({
             urlOrStyles: url,
             promise: stylesheetPromise,
-        })
+        });
 
         return stylesheetPromise;
     }
@@ -149,7 +149,7 @@
         stylesheetsLoaded.push({
             urlOrStyles: styles,
             promise: stylesheetPromise,
-        })
+        });
 
         return stylesheetPromise;
     }
@@ -184,7 +184,7 @@
         }
 
         return promise;
-    }
+    };
 
     if (typeof module !== 'undefined' && module.exports) {
         // commonjs
@@ -197,4 +197,4 @@
         window.nz.ffx.stylesheetsLoaded = stylesheetsLoaded;
     }
 
-}(typeof global !== 'undefined' ? global : this))
+}(typeof global !== 'undefined' ? global : this));

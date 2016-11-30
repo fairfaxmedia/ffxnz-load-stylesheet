@@ -176,7 +176,7 @@
         } else {
             // Our stylesheet hasn't been previously requested for load,
             // so let's determine if it's a URL or a string of CSS and load it.
-            if (/\.css$/.test(urlOrStyles)) {
+            if (/\.css(?:\?[^\?]+)*$/.test(urlOrStyles)) {
                 promise = _loadStylesheetFromURL(urlOrStyles, stylesClass, media);
             } else {
                 promise = _loadStylesheetFromCSS(urlOrStyles, stylesClass, media);
